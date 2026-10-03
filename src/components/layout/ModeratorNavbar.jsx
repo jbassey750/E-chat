@@ -6,7 +6,7 @@ const ModeratorNavbar = ({ isConnected }) => {
   const navigate = useNavigate();
   const [loggingOut, setLoggingOut] = useState(false);
 
-  const handleLogout = async () => {
+  const handleLogout = async () => { 
     if (loggingOut) return;
 
     setLoggingOut(true);

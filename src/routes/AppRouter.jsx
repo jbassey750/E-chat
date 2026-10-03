@@ -1,7 +1,9 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+
 import ModeratorLayout from "../components/layout/ModeratorLayout";
 import MessagesPage from "../pages/moderator/MessagesPage";
 import StatsPage from "../pages/moderator/StatsPage";
+import ModeratorHome from "../pages/moderator/ModeratorHome";
 
 import { ModeratorProvider } from "../context/ModeratorContext";
 import ModeratorLogin from "../pages/moderator/ModeratorLogin";
@@ -25,9 +27,10 @@ function AppRouter() {
           )
         }
       >
-        <Route index element={<Navigate to="messages" replace />} /> 
+        <Route index element={<Navigate to="home" replace />} /> 
         <Route path="messages" element={<MessagesPage />} />
         <Route path="stats" element={<StatsPage />} />
+        <Route path="home" element={<ModeratorHome />} />
       </Route>
 
       <Route path="*" element={<NotFound />} />

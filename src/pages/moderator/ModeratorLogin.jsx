@@ -47,8 +47,8 @@ const ModeratorLogin = () => {
       // Store moderator token
       localStorage.setItem("token", response.data.token);
 
-      // Go directly to moderator workspace
-      navigate("/moderator/workspace", { replace: true });
+      // Open the moderator home page after login.
+      navigate("/moderator/workspace/home", { replace: true });
     } catch (err) {
       const backendMessage = err.response?.data?.message;
 
